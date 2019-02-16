@@ -1,0 +1,250 @@
+    1  apt-get update
+    2  sudo apt-get update
+    3  sudo apt-get install gcc make perl
+    4  sudo rm /var/lib/dpkg/lock
+    5  sudo apt-get install gcc make perl
+    6  sudo rm /var/cache/apt/archives/lock
+    7  sudo apt-get install gcc make perl
+    8  cd /media/edureka/VBox_GAs_5.2.8/
+    9  sudo ./VBoxLinuxAdditions.run 
+   10  sudo apt-get install net-tools
+   11  ifconfig
+   12  sudo nano /etc/network/interfaces
+   13  sudo nano hostname
+   14  sudo nano /etc/hostname
+   15  sudo nano /etc/hosts
+   16  sudo apt-get update
+   17  sudo apt-get install curl
+   18  sudo su
+   19  exit
+   20  sudo nano /etc/hostname
+   21  sudo apt-get install openssh-server
+   22  sudo apt-get update
+   23  sudo nano /etc/ansible/hosts
+   24  sudo nano /etc/hosts
+   25  cd /etc/ansible
+   26  ansible -m ping all
+   27  ssh-keygen
+   28  ssh-copy-id node1
+   29  ssh node1
+   30  ansible -m ping all
+   31  ssh node1
+   32  ansible -m ping all
+   33  python3 --version
+   34  ansible --version
+   35  sudo apt-get install python
+   36  ansible -m ping all
+   37  systemctl status ansible
+   38  cd
+   39  sudo nano /etc/hostnae
+   40  sudo nano /etc/hostname
+   41  cd /etc/ansible
+   42  ansible -m ping all
+   43  cd
+   44  sudo apt-get install default-jdk
+   45  sudo apt-get update
+   46  sudo apt-get install apache2
+   47  sudo wget -q -O - https://jenkins-ci.org/debian/jenkins-ci.org.key | sudo apt-key add -
+   48  sudo sh -c 'echo deb http://pkg.jenkins-ci.org/debian binary/ > /etc/apt/sources.list.d/jenkins.list'
+   49  sudo apt-get update
+   50  sudo apt-get install jenkins
+   51  curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+   52  sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+   53  sudo apt-get update
+   54  apt-cache policy docker-ce
+   55  sudo apt-get install -y docker-ce
+   56  docker ps
+   57  sudo docker ps
+   58  mkdir ShareWindows
+   59  sudo mount -t vboxsf AWS /home/hemant/ShareWindows
+   60  sudo mount -t vboxsf AWS /home/edureka/ShareWindows
+   61  cd ShareWindows/
+   62  ls
+   63  cp eclipse-jee-photon-M6-linux-gtk-x86_64.tar.gz  /home/edureka
+   64  cd ~/.local/share/applications
+   65  ls
+   66  ls -l
+   67  sudo gedit /usr/share/applications/eclipse.desktop
+   68  gedit /usr/share/applications/eclipse.desktop
+   69  sudo nano /usr/share/applications/eclipse.desktop
+   70  sudo desktop-file-install /usr/share/applications/eclipse.desktop
+   71  sudo nano /usr/share/applications/eclipse.desktop
+   72  sudo desktop-file-install /usr/share/applications/eclipse.desktop
+   73  sudo nano /usr/share/applications/eclipse.desktop
+   74  sudo desktop-file-install /usr/share/applications/eclipse.desktop
+   75  cd /usr/local/bin/
+   76  sudo ln -s /home/edureka/Downloads/eclipse
+   77  sudo cp /home/edureka/Downloads/eclipse/icon.xpm /usr/share/pixmaps/eclipse.xpm
+   78  sudo nano /usr/share/applications/eclipse.desktop
+   79  sudo desktop-file-install /usr/share/applications/eclipse.desktop
+   80  cd /usr/local/bin/
+   81  sudo ln -s /home/edureka/Downloads/eclipse
+   82  sudo cp /home/edureka/Downloads/eclipse/icon.xpm /usr/share/pixmaps/eclipse.xpm
+   83  cd /usr/tomcat
+   84  cd /usr/bin/tomcat
+   85  cd /usr/bin
+   86  ls
+   87  gedit tomcat.sh
+   88  cd
+   89  gedit tomcat.sh
+   90  chmod -R 777 tomcat.sh
+   91  ./tomcat.sh
+   92  gedit tomcat.sh
+   93  ./tomcat.sh
+   94  gedit tomcat.sh
+   95  ./tomcat.sh
+   96  gedit tomcat.sh
+   97  ./tomcat.sh
+   98  sudo ./tomcat.sh
+   99  sudo/opt/tomcat/server.xml
+  100  sudo nano /opt/tomcat/server.xml
+  101  sudo nano /opt/tomcat/config/server.xml
+  102  sudo nano /opt/tomcat/conf/server.xml
+  103  systemctl restart tomcat
+  104  wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+  105  echo 'deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main' | sudo tee /etc/apt/sources.list.d/google-chrome.list
+  106  sudo apt-get update 
+  107  sudo apt-get install google-chrome-stable
+  108  cd ShareWindows/
+  109  cd New\ folder\ \(3\)/
+  110  ls
+  111  cp chromedriver /home/edureka
+  112  sudo su
+  113  ls
+  114  java -jar Untitled.jar
+  115  rm Untitled.jar 
+  116  cat /var/lib/jenkins/secrets/initialAdminPassword
+  117  sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+  118  systemctl restart jenkins
+  119  sudo useradd nagios
+  120  sudo groupadd nagcmd
+  121  sudo usermod -a -G nagcmd nagios
+  122  ./mount.sh
+  123  sudo mount -t vboxsf AWS /home/edureka/ShareWindows
+  124  cd ShareWindows/
+  125  cd New\ folder\ \(3\)/
+  126  cd ..
+  127  ls
+  128  cp nagios-4.3.4.tar.gz /home/edureka
+  129  cp nagios-plugins-2.2.1.tar.gz 
+  130  cp nagios-plugins-2.2.1.tar.gz /home/edureka
+  131  cd ..
+  132  tar xpf nagios-4*.tar.gz
+  133  cd nagios-4.3.4
+  134  ./configure --with-nagios-group=nagios --with-command-group=nagcmd
+  135  make -j4 all
+  136  sudo make install
+  137  sudo make install-commandmode
+  138  sudo make install-init
+  139  sudo make install-config
+  140  sudo /usr/bin/install -c -m 644 sample-config/httpd.conf /etc/apache2/sites-available/nagios.conf
+  141  sudo usermod -a -G nagcmd www-data
+  142  cd
+  143  tar xpf nagios-plugins-*.tar.gz
+  144  cd nagios-plugins-2.2.1
+  145  ./configure --with-nagios-user=nagios --with-nagios-group=nagcmd --with-openssl
+  146  make -j4
+  147  sudo make install
+  148  sudo nano /usr/local/nagios/etc/nagios.cfg
+  149  sudo mkdir /usr/local/nagios/etc/servers
+  150  sudo nano /usr/local/nagios/etc/objects/contacts.cfg
+  151  sudo a2enmod rewrite
+  152  sudo a2enmod cgi
+  153  sudo htpasswd -c /usr/local/nagios/etc/htpasswd.users nagiosadmin
+  154  sudo ln -s /etc/apache2/sites-available/nagios.conf /etc/apache2/sites-enabled/
+  155  sudo systemctl restart apache2
+  156  sudo nano /etc/systemd/system/nagios.service
+  157  sudo systemctl enable /etc/systemd/system/nagios.service
+  158  sudo systemctl start nagios
+  159  systemctl restart apache
+  160  systemctl restart apache2
+  161  sudo cp /etc/apache2/nagios.conf /etc/apache2/sites-available/nagios.conf
+  162  systemctl restart nagios
+  163  sudo apt-get -y purge php.*
+  164  sudo apt-get install php5 
+  165  sudo apt-get install php
+  166  sudo service apache2 restart
+  167  systemctl puppet status
+  168  systemctl status puppet
+  169  sudo mount -t vboxsf AWS /home/edureka/ShareWindows
+  170  cd ShareWindows/
+  171  ls
+  172  cd New\ folder\ \(3\)/
+  173  ls
+  174  cp addressbook.war /home/edureka/downloads
+  175  ansible m ping all
+  176  ansible -m ping all
+  177  cd ]
+  178  cd
+  179  ansible -m ping all
+  180  swarm init
+  181  docker swarm init
+  182  sudo docker swarm
+  183  sudo docker compose
+  184  sudo groupadd docker
+  185  sudo usermod -aG docker edureka
+  186  logout
+  187  docker ps
+  188  sudo curl -L https://github.com/docker/compose/releases/download/1.21.2/docker-compose-$(uname -s)-$(uname -m) -o /usr/local/bin/docker-compose
+  189  sudo chmod +x /usr/local/bin/docker-compose
+  190  docker-compose --version
+  191  cat /etc/.user_id 
+  192  date
+  193  sudo rm /etc/.user_id 
+  194  date
+  195  cat /etc/.user_id 
+  196  java -version
+  197  mvn -version
+  198  wget -q -O - https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo apt-key add -
+  199  sudo /etc/apt/sources.list
+  200  sudo vi /etc/apt/sources.list
+  201  sudo apt-get update
+  202  tail -5  /etc/apt/sources.list
+  203  cd /opt
+  204  pwd
+  205  ls
+  206  service jenkins start
+  207  sudo systemctl enable jenkins
+  208  sudo ufw allow 8080
+  209  wget http://mirrors.estointernet.in/apache/maven/maven-3/3.6.0/binaries/apache-maven-3.6.0-bin.tar.gz
+  210  sudo wget http://mirrors.estointernet.in/apache/maven/maven-3/3.6.0/binaries/apache-maven-3.6.0-bin.tar.gz
+  211  sudo tar -xf apache-maven-3.6.0-bin.tar.gz
+  212  sudo mv apache-maven-3.6.0/ apache-maven/
+  213  sudo update-alternatives --install /usr/bin/mvn maven /opt/apache-maven/bin/mvn 1001
+  214  sudo echo “export JAVA_HOME=/usr/lib/jvm/java-8-oracle” >> /etc/profile.d/maven.sh
+  215  ls /usr/lib
+  216* ls 
+  217  ls -altr /usr/lib/jvm
+  218  sudo echo “export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64” >> /etc/profile.d/maven.sh
+  219  ls /etc/profile.d
+  220  java -version
+  221  java
+  222  ls -altr /usr/lib/jvm
+  223  ls
+  224  ls apache-maven
+  225  ls /etc
+  226  ls /etc/profile.d/
+  227  sudo /etc/profile.d
+  228  sudo vi /etc/profile.d
+  229  sudo vi /etc/profile.d/maven.sh
+  230  sudo chmod +x sudo chmod +x maven.sh
+  231  sudo chmod +x /etc/profile.d/maven.sh
+  232  sudo source /etc/profile.d/maven.sh
+  233  source /etc/profile.d/maven.sh
+  234  service jenkins start
+  235  ifconfig -a
+  236  pwd
+  237  ls
+  238  ls /etc
+  239  ls /var
+  240  ls /var/opt/
+  241  ls /var/lib
+  242  ls /var/lib/jenkins/
+  243  ls /var/lib/jenkins/secrets
+  244  sudo ls /var/lib/jenkins/secrets
+  245  cat /var/lib/jenkins/secrets
+  246  sudo ls /var/lib/jenkins/secrets
+  247  cat /var/lib/jenkins/secrets/initialAdminPassword
+  248  sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+  249  history
+  250  history >> /home/edureka/history_16feb.txt
